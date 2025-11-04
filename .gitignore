@@ -57,6 +57,8 @@ sysinfo.txt
 
 # === Ignore Asset meta data unless asset is also ignored ===
 !/[Aa]ssets/**/*.meta
+!/[Aa]ssets/**/*.unity
+
 
 # === Ignore asset store tools ===
 [Aa]ssets/AssetStoreTools*

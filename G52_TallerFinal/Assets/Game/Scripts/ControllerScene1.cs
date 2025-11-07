@@ -1,34 +1,17 @@
-//using UnityEngine;
-//using UnityEngine.UI;
-//using TMPro;
-//public class ControllerScene1 : MonoBehaviour
-//{
-//    public TextMeshProUGUI textoScore;
-//    public TextMeshProUGUI textoItem;
-//    public Timer tiempoEscena;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
-//    // Start is called once before the first execution of Update after the MonoBehaviour is created
-//    void Start()
-//    {
-        
-//    }
+public class ControllerScene1 : MonoBehaviour
+{
+    public Transform jugador;
+    public string nextSceneName = "Scene2";
 
-//    // Update is called once per frame
-//    void Update()
-//    {
-        
-//        textoScore.text= GameManager.Instance.Score.ToString();
-//        textoItem.text= GameManager.Instance.ItemsCount.ToString();
-
-//    }
-
-//    public void TimeScene()
-//    {
-//        tiempoEscena.TimerStop();
-
-//        float tiempoParado = tiempoEscena.StopTime;
-//        GameManager.Instance.AddTime(tiempoParado);
-//    }
-
-
-//}
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log("Jugador tocó el punto final. Cargando siguiente escena...");
+            SceneManager.LoadScene(nextSceneName);
+        }
+    }
+}

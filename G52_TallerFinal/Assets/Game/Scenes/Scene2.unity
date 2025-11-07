@@ -149,7 +149,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 205817079}
+  m_Father: {fileID: 7031701819538592783}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -258,16 +258,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 30523198}
   m_CullTransparentMesh: 1
---- !u!1 &205817078 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8667022718794107468, guid: d34fe9c6dac57dc4f8c24490c302330c, type: 3}
-  m_PrefabInstance: {fileID: 1791383887}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &205817079 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7031701820256193856, guid: d34fe9c6dac57dc4f8c24490c302330c, type: 3}
-  m_PrefabInstance: {fileID: 1791383887}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &288600467
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -502,7 +492,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 205817079}
+  m_Father: {fileID: 7031701819538592783}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -627,7 +617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a425fe27177ea54cb8ebc1e54326515, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BanderaFinal
-  finalPanel: {fileID: 205817078}
+  finalPanel: {fileID: 8667022719217357571}
 --- !u!1 &1143828764
 GameObject:
   m_ObjectHideFlags: 0
@@ -1042,7 +1032,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8667022718794107468, guid: d34fe9c6dac57dc4f8c24490c302330c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1088,7 +1078,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 205817079}
+  m_Father: {fileID: 7031701819538592783}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1361,6 +1351,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlataformasGiratorias
   rotationAxis: {x: 0, y: 1, z: 0}
   rotationSpeed: 60
+--- !u!224 &7031701819538592783 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7031701820256193856, guid: d34fe9c6dac57dc4f8c24490c302330c, type: 3}
+  m_PrefabInstance: {fileID: 1791383887}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8667022719217357571 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8667022718794107468, guid: d34fe9c6dac57dc4f8c24490c302330c, type: 3}
+  m_PrefabInstance: {fileID: 1791383887}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9008554583595810627
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -6,6 +6,16 @@ public class CollectableItem : MonoBehaviour
     public int points = 10;
     public bool isGoodItem = true;
 
+    [Header("Sonido")]
+    public AudioClip collectSound;
+
+    private AudioSource audioSource;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -21,7 +31,13 @@ public class CollectableItem : MonoBehaviour
                 Debug.Log("Has perdido -" + points + " puntos!");
             }
 
-            Destroy(gameObject);
+            if (collectSound != null && audioSource != null)
+            {
+                audioSource.PlayOneShot(collectSound);
+            }
+
+           
+            Destroy(gameObject, collectSound != null ? collectSound.length : 0f);
         }
     }
 }

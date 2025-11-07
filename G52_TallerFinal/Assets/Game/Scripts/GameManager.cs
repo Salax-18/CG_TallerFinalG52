@@ -9,7 +9,9 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI textoScore;
 
     private int score = 0;
-
+    public int fallCount = 0;
+    public float elapsedTime = 0f;
+    private bool timerRunning = false;
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -50,4 +52,57 @@ public class GameManager : MonoBehaviour
         if (textoScore != null)
             textoScore.text = "" + score;
     }
+
+ 
+
+    void Update()
+    {
+        if (timerRunning)
+            elapsedTime += Time.deltaTime;
+    }
+
+    
+    public void StartTimer()
+    {
+        timerRunning = true;
+        elapsedTime = 0f;
+    }
+
+    public void StopTimer()
+    {
+        timerRunning = false;
+    }
+
+    public void AddFall()
+    {
+        fallCount++;
+    }
+
+    
+    public void ShowFinalPanel(GameObject panel)
+    {
+        if (panel == null)
+        {
+            Debug.LogWarning(" No se asignó un panel final en GoalTrigger.");
+            return;
+        }
+
+        panel.SetActive(true);
+
+        TMP_Text scoreT = panel.transform.Find("FinalScoreText").GetComponent<TMP_Text>();
+        TMP_Text fallsT = panel.transform.Find("FinalFallsText").GetComponent<TMP_Text>();
+        TMP_Text timeT = panel.transform.Find("FinalTimeText").GetComponent<TMP_Text>();
+
+        scoreT.text = "Score: " + textoScore.text;
+        fallsT.text = "Caídas: " + fallCount;
+        timeT.text = "Tiempo: " + FormatTime(elapsedTime);
+    }
+
+    private string FormatTime(float t)
+    {
+        int minutes = Mathf.FloorToInt(t / 60f);
+        int seconds = Mathf.FloorToInt(t % 60f);
+        return minutes.ToString("00") + ":" + seconds.ToString("00");
+    }
+
 }
